@@ -1,0 +1,52 @@
+var app = new Vue({
+  el: "#app",
+  data: {
+    NASAImages: [],
+    loadingData: true
+  },
+  methods: {
+    checkIfImageIsLiked(image) {
+      const imageLiked = window.localStorage.getItem("LIKED" + image.url);
+      return imageLiked ? true : false;
+    },
+    commentOnImage(image) {
+      window.localStorage.setItem("COMMENT" + image.url, image.comment);
+    },
+    getImageComment(image) {
+      const imageComment = window.localStorage.getItem("COMMENT" + image.url);
+      return imageComment ? imageComment : "";
+    },
+    likeImage(image) {
+      let ImageAlreadyLiked = this.checkIfImageIsLiked(image);
+      let isLiked;
+      if (ImageAlreadyLiked) {
+        window.localStorage.removeItem("LIKED" + image.url);
+        isLiked = false;
+      } else {
+        window.localStorage.setItem("LIKED" + image.url, "1");
+        isLiked = true;
+      }
+      image.isLiked = isLiked;
+      console.log(image);
+    },
+    async loadNASAImages() {
+      const thisReference = this;
+      this.loadingData = true;
+      const { data } = await axios.get(
+        "https://api.nasa.gov/planetary/apod?api_key=clLidcMIMzqHcnAaCBbwVO0b9itrUVSf2Q8WBfJb"
+      );
+      this.NASAImages = [data];
+      this.NASAImages.forEach((NASAImage, i) => {
+        const isLiked = thisReference.checkIfImageIsLiked(NASAImage);
+        const imageComment = thisReference.getImageComment(NASAImage);
+        thisReference.$set(NASAImage, "isLiked", isLiked);
+        thisReference.$set(NASAImage, "comment", imageComment);
+      });
+      this.loadingData = false;
+    }
+  },
+  mounted() {
+    //alert("App is mounted");
+    this.loadNASAImages();
+  }
+});

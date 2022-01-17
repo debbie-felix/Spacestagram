@@ -1,0 +1,317 @@
+@import url(https://fonts.googleapis.com/css?family=Syncopate:400,700);
+
+body {
+  margin: 0px;
+  background-color: rgb(17, 15, 15);
+}
+
+#planogram{
+  background: #ffffff;
+  border-radius: 5px;
+  width: 15px;
+  height: 15px;
+  
+}
+
+#root{
+  position: absolute;
+  margin-left: 535px;
+}
+
+#loading{
+  color: #ffffff;
+}
+  .card{
+    border-radius: 10px;
+   width: 300px;
+    margin: auto;
+   
+    
+  }
+ 
+  .card-title{
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  #photo-of-day{
+    font-size: 11px;
+    margin: auto;
+  }
+
+  .copyright{
+    font-size: 11px;
+    /* margin: auto; */
+    text-align: center;
+    margin-top: 2px;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+  .card-body{
+    min-height: 240px;
+   
+  }
+  .card-text{
+    font-size: 9px;
+    margin-bottom: 30px;
+  }
+
+  .num-of-likes{
+    font-size: 11px;
+    margin-left: 8px;
+  }
+
+ .num-of-comments{
+    font-size: 11px;
+    margin-left: 76px;
+
+  }
+
+a{
+  color: #ffffff;
+}
+
+a:hover{
+  color: #ffffff;
+}
+  .num-of-shares{
+   
+    font-size: 11px;
+    margin-left: 66px;
+  }
+
+.btn-dark{
+  margin-left: 68px;
+}
+
+.btn-primary{
+    float: right;
+ }
+
+
+.fa-thumbs-up{
+  color: #ffffff;
+}
+
+
+.popup-content {
+  font-size: 12px;
+  margin: auto;
+  background: rgb(255, 255, 255);
+  width: 400px;
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+
+
+
+.comments-container{
+  width: 100%;
+ 
+}
+
+.comment-card{
+  border-radius: 5px;
+  background-color: rgb(242, 253, 253);
+  height: 435px;
+  width: 300px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.comment-prompt{
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.allComments{
+  height: 400px;
+  font-size: 12px;
+  overflow: hidden;
+
+}
+
+#inputComment{
+  font-size: 12px;
+  width: 300px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+#submitbtn{
+  float: left;
+  width: 300px;
+}
+
+
+svg {
+  background: hsl(0, 0%, 8%);        
+}
+
+svg.star-background {
+  /* position: absolute; */
+  z-index: -1; 
+  min-width: 100%;
+  height: 100%
+  }
+  
+  
+    .stars {
+        transform-origin: center center;
+    }
+    .stars-sm-no-rotate {
+        fill: hsl(60, 50%, 50%);
+        transform: scale(0.8) rotate(200deg) translate(-350 -50);
+    }
+    .stars-sm {
+        fill: hsl(30, 30%, 50%);
+        animation: stars-sm-rotate 400s infinite linear;
+    }
+    .stars-md {
+        fill: hsl(60, 80%, 80%);
+        animation: stars-md-rotate 350s infinite linear;
+    }
+    .stars-lg {
+        fill: hsl(60, 30%, 70%);
+        animation: stars-lg-rotate 300s infinite linear;
+    }
+    .flicker-circles {
+        transform-origin: center center;
+        animation: flicker-circles-rotate 150s infinite linear;
+    }
+    .flicker-circles circle {
+        /* r: 50; */
+        fill: url(#flickerGradient);
+    }
+    .sun {
+      height: 100%; 
+      width: 100%;
+      /* y: 0; 
+      x: 0;  */
+      fill: url(#solarGradient);
+    }
+    @keyframes flicker-circles-rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+  
+    @keyframes stars-sm-rotate {
+        from {
+            transform: rotate(-0deg) translate(-75px, 225px);
+        }
+        to {
+            transform: rotate(-360deg) translate(-75px, 225px);
+        }
+    }
+  
+    @keyframes stars-md-rotate {
+        from {
+            transform: scale(1.25) rotate(-45deg) translate(300px, -50px);
+        }
+        to {
+            transform: scale(1.25) rotate(-405deg) translate(300px, -50px);
+        }
+    }
+  
+    @keyframes stars-lg-rotate {
+        from {
+            transform: scale(2.1) rotate(-90deg) translate(30px, 50px);
+        }
+        to {
+            transform: scale(2.1) rotate(-450deg) translate(30px, 50px);
+        }
+    }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .App {
+  text-align: center;
+} */
+
+
+
+/* 
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
